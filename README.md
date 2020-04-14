@@ -6,7 +6,7 @@ This is the [ipfs](http://ipfs.io) commandline tool. It contains a full ipfs nod
 ```sh
 wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
 source /home/$USER/.bashrc
-https://dist.ipfs.io/go-ipfs/v0.4.23/go-ipfs_v0.4.23_linux-amd64.tar.gz
+wget https://dist.ipfs.io/go-ipfs/v0.4.23/go-ipfs_v0.4.23_linux-amd64.tar.gz
 tar xvfz go-ipfs.tar.gz
 cd go-ipfs
 ./install.sh
