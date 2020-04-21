@@ -15,19 +15,6 @@ If not work,move the binary somewhere in your `$PATH`:
 ```sh
 sudo mv ipfs /usr/local/bin/ipfs
 ```
-## Usage
-First, you must initialize and run your local ipfs node:
-
-```sh
-ipfs init
-ipfs daemon &
-```
-This will give you directions to get started with ipfs.
-You can always get help with:
-
-```sh
-ipfs --help
-```
 ## ipfs-cluster Install
 
 ```sh
@@ -38,3 +25,40 @@ go install ./cmd/ipfs-cluster-service
 go install ./cmd/ipfs-cluster-ctl
 go install ./cmd/ipfs-cluster-follow
 ```
+
+## Usage for Private Network
+First, you must initialize and run your local ipfs node:
+
+```sh
+rm -rf ~/.ipfs/
+ipfs init
+sudo nano ~/.ipfs/swarm.key
+```
+Put in swarm.key copy 
+Reference: https://https://tstrs.me/en/1459.htmltstrs.me/en/1459.html
+
+```sh
+ipfs bootstrap rm all
+ipfs bootstrap add /ip4/192.241.213.72/tcp/4001/ipfs/QmcJw57d1X38X4kknLWHh4gKNhB4yfj9cQitwQpCEFFdz5
+ipfs daemon &
+ipfs swarm peers
+```
+This will give you directions to get started with ipfs private network.
+
+## Usage for IPFS-Cluster in Private Network
+Put in Follow_service.json file.
+```sh
+ipfs-cluster-service init --consensus crdt
+sudo rm -rf ~/.ipfs-cluster/service.json
+sudo nano ~/.ipfs-cluster/service.json
+```
+ipfs-cluster-service mode.
+```sh
+ipfs-cluster-service daemon
+```
+or 
+ipfs-cluster-follow mode.
+```sh
+ipfs-cluster-follow ipfs-cluster http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
+```
+
