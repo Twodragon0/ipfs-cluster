@@ -61,4 +61,15 @@ ipfs-cluster-follow mode.
 ```sh
 ipfs-cluster-follow ipfs-cluster http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
 ```
-
+## Error solutions
+ipfs daemon for private network solutions:
+- Error: serveHTTPApi: manet.Listen(/ip4/127.0.0.1/tcp/5001) failed: listen tcp4 127.0.0.1:5001: bind: address already in use
+- Error: serveHTTPGateway: manet.Listen(/ip4/127.0.0.1/tcp/8080) failed: listen tcp4 127.0.0.1:8080: bind: address already in use
+``sh
+netstat -ano | grep 5001
+kill $(lsof -t -i:5001)
+``
+``sh
+sudo lsof -i :8080
+sudo kill -9 $PID
+``
