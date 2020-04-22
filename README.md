@@ -59,7 +59,7 @@ ipfs-cluster-service daemon
 or 
 ipfs-cluster-follow mode.
 ```sh
-ipfs-cluster-follow ipfs-cluster http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
+ipfs-cluster-follow ipfs-cluster run --init http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
 ```
 ## Error solutions
 ipfs daemon for private network solutions:
