@@ -1,8 +1,5 @@
-# ipfs commandline tool
 
-This is the [ipfs](http://ipfs.io) commandline tool. It contains a full ipfs node.
-
-## Go, IPFS Install
+## Go,IPFS Install
 ```sh
 wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
 source /home/$USER/.bashrc
