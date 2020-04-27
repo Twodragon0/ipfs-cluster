@@ -70,3 +70,5 @@ kill $(lsof -t -i:5001)
 sudo lsof -i :8080
 sudo kill -9 $PID
 ```
+
+https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792
