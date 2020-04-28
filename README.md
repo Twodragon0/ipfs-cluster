@@ -82,9 +82,24 @@ ERROR crdt: reading varint: buffer too small crdt.go:308
 
 https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792
 
+$sudo nano ~/.bashrc (#export GOPATH=/root/go export #GOROOT=/root/.go)
+
 ```sh
 go clean ipfs-cluster-ctl
 go clean ipfs-cluster-service
 go clean ipfs-cluster-follow
+wget https://dist.ipfs.io/ipfs-cluster-follow/v0.12.1/ipfs-cluster-follow_v0.12.1_linux-amd64.tar.gz
+wget https://dist.ipfs.io/ipfs-cluster-service/v0.12.1/ipfs-cluster-service_v0.12.1_linux-amd64.tar.gz
+wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.12.1/ipfs-cluster-ctl_v0.12.1_linux-amd64.tar.gz
+tar -xvzf ipfs-cluster-follow_v0.12.1_linux-amd64.tar.gz
+tar -xvzf ipfs-cluster-service_v0.12.1_linux-amd64.tar.gz
+tar -xvzf ipfs-cluster-ctl_v0.12.1_linux-amd64.tar.gz
+cd ipfs-cluster-follow
+mv ipfs-cluster-follow /usr/local/bin/
+cd ipfs-cluster-service
+mv ipfs-cluster-service /usr/local/bin/
+cd ipfs-cluster-ctl
+mv ipfs-cluster-ctl /usr/local/bin/
 ```
+
 After clean, installation from homepage
