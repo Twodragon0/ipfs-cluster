@@ -14,6 +14,11 @@ sudo mv ipfs /usr/local/bin/ipfs
 ```
 ## ipfs-cluster Install
 
+Installing from source
+The following requirements apply to the installation from source:
+Go 1.12+
+Git
+
 ```sh
 git clone https://github.com/ipfs/ipfs-cluster.git
 cd ipfs-cluster
@@ -22,6 +27,8 @@ go install ./cmd/ipfs-cluster-service
 go install ./cmd/ipfs-cluster-ctl
 go install ./cmd/ipfs-cluster-follow
 ```
+If using raspberry pi, download from homepage: https://dist.ipfs.io/#ipfs-cluster-ctl
+And it should the same method (Choice go install or download from homepage)
 
 ## Usage for Private Network
 First, you must initialize and run your local ipfs node:
@@ -70,5 +77,14 @@ kill $(lsof -t -i:5001)
 sudo lsof -i :8080
 sudo kill -9 $PID
 ```
+ERROR crdt: expected 1 as the cid version number, got: 10 crdt.go:308
+ERROR crdt: reading varint: buffer too small crdt.go:308
 
 https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792
+
+```sh
+go clean ipfs-cluster-ctl
+go clean ipfs-cluster-service
+go clean ipfs-cluster-follow
+```
+After clean, installation from homepage
