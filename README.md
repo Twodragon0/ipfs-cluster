@@ -14,10 +14,10 @@ sudo mv ipfs /usr/local/bin/ipfs
 ```
 ## ipfs-cluster Install
 
-Installing from source
+Installing from source  
 The following requirements apply to the installation from source:
-Go 1.12+
-Git
+Go 1.12+  
+Git  
 
 ```sh
 git clone https://github.com/ipfs/ipfs-cluster.git
@@ -27,8 +27,8 @@ go install ./cmd/ipfs-cluster-service
 go install ./cmd/ipfs-cluster-ctl
 go install ./cmd/ipfs-cluster-follow
 ```
-If using raspberry pi, download from homepage: https://dist.ipfs.io/#ipfs-cluster-ctl
-And it should the same method (Choice go install or download from homepage)
+If using raspberry pi, download from homepage: https://dist.ipfs.io/#ipfs-cluster-ctl  
+And it should the same method (Choice go install or download from homepage)  
 
 ## Usage for Private Network
 First, you must initialize and run your local ipfs node:
@@ -66,7 +66,7 @@ ipfs-cluster-follow mode.
 ipfs-cluster-follow ipfs-cluster run --init http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
 ```
 ## Error solutions
-ipfs daemon for private network solutions:
+ipfs daemon for private network solutions:  
 - Error: serveHTTPApi: manet.Listen(/ip4/127.0.0.1/tcp/5001) failed: listen tcp4 127.0.0.1:5001: bind: address already in use
 - Error: serveHTTPGateway: manet.Listen(/ip4/127.0.0.1/tcp/8080) failed: listen tcp4 127.0.0.1:8080: bind: address already in use
 ```sh
@@ -77,10 +77,10 @@ kill $(lsof -t -i:5001)
 sudo lsof -i :8080
 sudo kill -9 $PID
 ```
-ERROR crdt: expected 1 as the cid version number, got: 10 crdt.go:308
-ERROR crdt: reading varint: buffer too small crdt.go:308
+ERROR crdt: expected 1 as the cid version number, got: 10 crdt.go:308  
+ERROR crdt: reading varint: buffer too small crdt.go:308  
 
-https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792
+https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792  
 
 $sudo nano ~/.bashrc (#export GOPATH=/root/go export #GOROOT=/root/.go)
 
