@@ -43,7 +43,7 @@ Reference: https://https://tstrs.me/en/1459.htmltstrs.me/en/1459.html
 
 ```sh
 ipfs bootstrap rm all
-ipfs bootstrap add /ip4/192.241.213.72/tcp/4001/ipfs/QmcJw57d1X38X4kknLWHh4gKNhB4yfj9cQitwQpCEFFdz5
+ipfs bootstrap add /ip4/192.241.213.72/tcp/4001/ipfs/Qma4bvcDe5sXZbBqiexX4Tf8zB4bpVxr7UHFnfozFiFtTv
 ipfs daemon &
 ipfs swarm peers
 ```
