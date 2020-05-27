@@ -3,8 +3,8 @@
 ```sh
 wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
 source /home/$USER/.bashrc
-wget https://dist.ipfs.io/go-ipfs/v0.4.23/go-ipfs_v0.4.23_linux-amd64.tar.gz
-tar -xvzf go-ipfs_v0.4.23_linux-amd64.tar.gz
+wget https://dist.ipfs.io/go-ipfs/v0.5.1/go-ipfs_v0.5.1_linux-amd64.tar.gz
+tar -xvzf go-ipfs_v0.5.1_linux-amd64.tar.gz
 cd go-ipfs
 sudo ./install.sh
 ```
