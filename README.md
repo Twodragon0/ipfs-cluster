@@ -101,5 +101,9 @@ mv ipfs-cluster-service /usr/local/bin/
 cd ipfs-cluster-ctl
 mv ipfs-cluster-ctl /usr/local/bin/
 ```
-
 After clean, installation from homepage
+
+## Testground file move using scp
+```sh
+scp -P 30000 /home/wrl/testground/312f91922027.tgz ny@161.*.*.*:~/
+```
