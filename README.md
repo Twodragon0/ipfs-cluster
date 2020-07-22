@@ -15,9 +15,9 @@ sudo mv ipfs /usr/local/bin/ipfs
 ## ipfs-cluster Install
 
 Installing from source  
-The following requirements apply to the installation from source:
-Go 1.12+  
-Git  
+The following requirements apply to the installation from source:    
+- Go 1.12+    
+- Git   
 
 ```sh
 git clone https://github.com/ipfs/ipfs-cluster.git
@@ -27,7 +27,8 @@ go install ./cmd/ipfs-cluster-service
 go install ./cmd/ipfs-cluster-ctl
 go install ./cmd/ipfs-cluster-follow
 ```
-If using raspberry pi, download from homepage: https://dist.ipfs.io/#ipfs-cluster-ctl  
+If using raspberry pi, download from homepage:      
+https://dist.ipfs.io/#ipfs-cluster-ctl   
 And it should the same method (Choice go install or download from homepage)  
 
 ## Usage for Private Network
@@ -56,19 +57,18 @@ ipfs-cluster-service init --consensus crdt
 sudo rm -rf ~/.ipfs-cluster/service.json
 sudo nano ~/.ipfs-cluster/service.json
 ```
-ipfs-cluster-service mode.
+ipfs-cluster-service mode:
 ```sh
 ipfs-cluster-service daemon
 ```
-or 
-ipfs-cluster-follow mode.
+or ipfs-cluster-follow mode:
 ```sh
 ipfs-cluster-follow ipfs-cluster run --init http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
 ```
 ## Error solutions
-ipfs daemon for private network solutions:  
-- Error: serveHTTPApi: manet.Listen(/ip4/127.0.0.1/tcp/5001) failed: listen tcp4 127.0.0.1:5001: bind: address already in use
-- Error: serveHTTPGateway: manet.Listen(/ip4/127.0.0.1/tcp/8080) failed: listen tcp4 127.0.0.1:8080: bind: address already in use
+ipfs daemon for private network solutions:   
+- Error: serveHTTPApi: manet.Listen(/ip4/127.0.0.1/tcp/5001) failed: listen tcp4 127.0.0.1:5001: bind: address already in use    
+- Error: serveHTTPGateway: manet.Listen(/ip4/127.0.0.1/tcp/8080) failed: listen tcp4 127.0.0.1:8080: bind: address already in use    
 ```sh
 netstat -ano | grep 5001
 kill $(lsof -t -i:5001)
@@ -77,10 +77,11 @@ kill $(lsof -t -i:5001)
 sudo lsof -i :8080
 sudo kill -9 $PID
 ```
-ERROR crdt: expected 1 as the cid version number, got: 10 crdt.go:308  
-ERROR crdt: reading varint: buffer too small crdt.go:308  
 
-https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792  
+ERROR crdt: expected 1 as the cid version number, got: 10 crdt.go:308    
+ERROR crdt: reading varint: buffer too small crdt.go:308     
+
+https://discuss.ipfs.io/t/share-pin-and-data-using-ipfs-cluster-in-different-network/7792    
 
 $sudo nano ~/.bashrc (#export GOPATH=/root/go export #GOROOT=/root/.go)
 
