@@ -95,12 +95,12 @@ wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.12.1/ipfs-cluster-ctl_v0.12.1_linu
 tar -xvzf ipfs-cluster-follow_v0.12.1_linux-amd64.tar.gz
 tar -xvzf ipfs-cluster-service_v0.12.1_linux-amd64.tar.gz
 tar -xvzf ipfs-cluster-ctl_v0.12.1_linux-amd64.tar.gz
-cd ipfs-cluster-follow
-mv ipfs-cluster-follow /usr/local/bin/
-cd ipfs-cluster-service
-mv ipfs-cluster-service /usr/local/bin/
-cd ipfs-cluster-ctl
-mv ipfs-cluster-ctl /usr/local/bin/
+cd ~/ipfs-cluster-follow
+sudo mv ipfs-cluster-follow /usr/local/bin/
+cd ~/ipfs-cluster-service
+sudo mv ipfs-cluster-service /usr/local/bin/
+cd ~/ipfs-cluster-ctl
+sudo mv ipfs-cluster-ctl /usr/local/bin/
 ```
 After clean, installation from homepage
 
