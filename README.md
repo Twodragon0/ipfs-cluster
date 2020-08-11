@@ -3,10 +3,11 @@
 ```sh
 wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
 source /home/$USER/.bashrc
-wget https://dist.ipfs.io/go-ipfs/v0.5.1/go-ipfs_v0.5.1_linux-amd64.tar.gz
-tar -xvzf go-ipfs_v0.5.1_linux-amd64.tar.gz
+wget https://github.com/ipfs/go-ipfs/releases/download/v0.6.0/go-ipfs_v0.6.0_linux-amd64.tar.gz
+tar -xvzf go-ipfs_v0.6.0_linux-amd64.tar.gz
 cd go-ipfs
-sudo ./install.sh
+sudo bash install.sh
+ipfs --version
 ```
 If not work,move the binary somewhere in your `$PATH`:
 ```sh
