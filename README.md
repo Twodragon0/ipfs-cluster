@@ -40,7 +40,7 @@ ipfs init
 sudo nano ~/.ipfs/swarm.key
 ```
 Put in swarm.key copy 
-Reference: https://https://tstrs.me/en/1459.htmltstrs.me/en/1459.html
+Reference: https://tstrs.me/en/1459.htmltstrs.me/en/1459.html
 
 ```sh
 ipfs bootstrap rm all
