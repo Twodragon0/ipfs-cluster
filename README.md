@@ -44,7 +44,7 @@ Reference: https://tstrs.me/en/1459.htmltstrs.me/en/1459.html
 
 ```sh
 ipfs bootstrap rm all
-ipfs bootstrap add /ip4/192.241.213.72/tcp/4001/p2p/Qma4bvcDe5sXZbBqiexX4Tf8zB4bpVxr7UHFnfozFiFtTv
+ipfs bootstrap add /ip4/192.*.*.*/tcp/4001/p2p/Qma4bvcDe5sXZbB*FtTv
 ipfs daemon &
 ipfs swarm peers
 ```
@@ -63,7 +63,7 @@ ipfs-cluster-service daemon
 ```
 or ipfs-cluster-follow mode:
 ```sh
-ipfs-cluster-follow ipfs-cluster run --init http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61HC83453jW6zrRu9Eefqh3DAx4Yj
+ipfs-cluster-follow ipfs-cluster run --init http://127.0.0.1:8080/ipfs/Qme9W5kY8iL7xUo1r61*h3DAx4Yj
 ```
 ## Error solutions
 ipfs daemon for private network solutions:   
